@@ -1,0 +1,180 @@
+/* --------------------------------------- GLOBAL ------------------------------------- */
+:root {
+  /* Primary colours */
+  --color-marine-blue: hsl(213, 96%, 18%);
+  --color-purple-blue: hsl(243, 100%, 62%);
+  --color-pastel-blue: hsl(228, 100%, 84%);
+  --color-light-blue: hsl(206, 94%, 87%);
+  --color-strawberry: hsl(354, 84%, 57%);
+
+  /* Neutral colours */
+  --color-cool-gray: hsl(231, 11%, 63%);
+  --color-light-gray: hsl(229, 24%, 87%);
+  --color-magnolia: hsl(217, 100%, 97%);
+  --color-alabaster: hsl(231, 100%, 99%);
+  --color-white: hsl(0, 0%, 100%);
+
+  --font-size: 16px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 500;
+  --font-weight-extra-bold: 700;
+  --font-family: 'Ubuntu', sans-serif;
+}
+
+/*
+
+CSS Property Ordering
+
+  1. Generated content e.g. content: '';
+  2. Position and layout e.g. position, z-index, top, bottom, flexbox properties
+  3. Display/visibility e.g. display, visibility, opacity, transform
+  4. Clipping e.g. overflow, clip
+  5. Animation e.g. transition, animation
+  6. Box model e.g. width, height, padding, margin, border
+  7. Background e.g. background, box-shadow, cursor
+  8. Text e.g. font, text-align, text-decoration, text-transform, text-shadow
+
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: aliceblue;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  color: var(--color-marine-blue);
+}
+
+h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ---------------------------------------- MOBILE ----------------------------------- */
+.container {
+  position: relative;
+}
+
+.step_panel {
+  background: url("./assets/images/bg-sidebar-mobile.svg") center center no-repeat;
+  background-size: cover;
+  height: 216px;
+}
+
+.form {
+  position: relative;
+  top: -86px;
+  min-height: 300px;
+  margin: 0 20px;
+  padding: 34px 28px;
+  background-color: white;
+  border-radius: 14px;
+}
+
+.form_nav {
+  background-color: var(--color-white);
+  min-height: 40px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  height: 82px;
+}
+
+.form_nav a {
+  text-decoration: none;
+  color: var(--color-cool-gray);
+}
+
+.form_nav button {
+  padding: 16px 20px;
+  background-color: var(--color-marine-blue);
+  border: none;
+  border-radius: 5px;
+  color: var(--color-alabaster);
+  cursor: pointer;
+}
+
+.form_nav button:hover,
+.form_nav button:focus {
+  background-color: hsla(213, 96%, 18%, 0.9);
+}
+
+.step_counter {
+  padding: 44px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+.step_counter__number.selected {
+  background-color: var(--color-light-blue);
+  border: 1px solid var(--color-light-blue);
+  color: var(--color-marine-blue);
+}
+
+.step_counter a {
+  text-decoration: none;
+}
+
+.step_counter__number {
+  border: 1px solid var(--color-white);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  padding-top: 7px;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.step_counter__info {
+  display: none;
+}
+
+
+/* ---------------------------------------- DESKTOP ----------------------------------- */
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 16px;
+    padding: 10px;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .step_panel {
+    background-image: url("./assets/images/bg-sidebar-desktop.svg");
+    height: auto;
+  }
+
+  .step_counter__info {
+    display: block;
+  }
+
+  .form,
+  .form_nav {
+    position: static;
+  }
+
+  .form_container {
+    flex-grow: 1;
+  }
+
+  .step_panel {
+    width: 228px;
+    border-radius: 10px;
+  }
+
+}

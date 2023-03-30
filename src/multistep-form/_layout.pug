@@ -1,0 +1,61 @@
+// - Main layout
+block vars
+  - var step = 2
+  - var backLink = ""
+  - var end = false
+
+doctype html 
+html(lang="en")
+  head 
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Step #{step}
+
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(rel="preconnect", href="https://fonts.googleapis.com", crossorigin)
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap")
+
+    block head_extras
+
+  body
+
+    main
+    .container
+      .step_panel
+
+        //- side panel / step counter
+        .step_counter
+          a(href="/multistep-form/" class=step == 1 ? "selected" : "").step_counter__number 1
+          .step_counter__info
+            p.step_counter__step Step 1
+            h2.step_counter__title Personal info
+
+          a(href="/multistep-form/step-2/" class=step == 2 ? "selected" : "").step_counter__number 2
+          .step_counter__info
+            p.step_counter__step Step 2
+            h2.step_counter__title Select plan
+
+          a(href="/multistep-form/step-3/" class=step == 3 ? "selected" : "").step_counter__number 3
+          .step_counter__info
+            p.step_counter__step Step 3
+            h2.step_counter__title Add-ons
+
+          a(href="/multistep-form/step-4/" class=step == 4 ? "selected" : "").step_counter__number 4
+          .step_counter__info
+            p.step_counter__step Step 4
+            h2.step_counter__title Summary
+      
+      .form_container
+        .form
+          block content
+        .form_nav
+          if backLink
+            a(href=backLink) Go Back
+          else 
+            p &nbsp;
+          if !end
+            button Next Step
+
+    block body_extras
+
