@@ -206,6 +206,7 @@ h1, h2 {
   body {
     padding-top: 200px;
   }
+  
   #container {
     flex-direction: row;
     width: 810px;
