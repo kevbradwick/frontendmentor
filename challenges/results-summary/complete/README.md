@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://github.com/kevbradwick/frontendmentor/tree/results-summary-component)
-- Live Site URL: [https://frontendmentor-results-summary.vercel.app/](https://frontendmentor-results-summary.vercel.app)
+- Solution URL: [Github](https://github.com/kevbradwick/frontendmentor)
+- Live Site URL: [https://frontendmentor.kevinbradwick.com/results-summary](https://frontendmentor.kevinbradwick.com/results-summary)
 
 ## My process
 
