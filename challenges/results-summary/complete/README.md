@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/kevbradwick/frontendmentor)
-- Live Site URL: [https://frontendmentor.kevinbradwick.com/results-summary](https://frontendmentor.kevinbradwick.com/results-summary)
+- Live Site URL: [https://frontendmentor-psi.vercel.app/results-summary](https://frontendmentor-psi.vercel.app/results-summary)
 
 ## My process
 
