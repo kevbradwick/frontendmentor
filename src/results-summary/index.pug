@@ -1,0 +1,59 @@
+doctype html 
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    
+    title Results Summary
+
+    link(rel="icon", type="image/png", sizes="32x32" href="./assets/images/favicon-32x32.png")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css")
+    link(rel="stylesheet", href="style.css")
+
+body
+
+  main
+    #container
+      #results-container
+        h1 Your Result
+        .circle
+          p.big 76
+          p.summary of 100
+
+        h2 Great
+        p.summary You scored higher than 65% of the people who have taken these tests.
+
+      #summary-container
+        h2 Summary
+
+        .alert.reaction
+          .title
+            img(src="./assets/images/icon-reaction.svg", alt="Reaction") 
+            h3 Reaction
+          .score 
+            | 80 <span> / 100</span>
+
+        .alert.memory
+          .title
+            img(src="./assets/images/icon-memory.svg", alt="Memory")
+            h3 Memory
+          .score 
+            | 92 <span>/ 100</span>
+
+        .alert.verbal 
+          .title
+            img(src="./assets/images/icon-verbal.svg", alt="Verbal")
+            h3 Verbal
+          .score 
+            | 61 <span> / 100</span>
+
+        .alert.visual
+          .title
+            img(src="./assets/images/icon-visual.svg", alt="Visual")
+            h3 Visual
+          .score 
+            | 72 <span> / 100</span>
+
+        button.btn Continue
+

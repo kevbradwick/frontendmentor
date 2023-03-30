@@ -1,18 +1,16 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "frontendmentor",
+  "version": "1.0.0",
+  "description": "This repo holds the source code to the challenges featured on [frontendmentor.io](https://frontendmentor.io)",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "parcel 'src/**/*.pug'",
+    "build": "parcel build 'src/**/*.pug' --no-cache"
   },
-  "dependencies": {
-    "eslint": "8.37.0",
-    "eslint-config-next": "13.2.4",
-    "next": "13.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-pug": "^2.8.3",
+    "parcel": "^2.8.3"
   }
 }
