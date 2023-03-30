@@ -21,41 +21,44 @@ html(lang="en")
   body
 
     main
-    .container
-      .step_panel
+      .container
+        aside.step_panel
 
-        //- side panel / step counter
-        .step_counter
-          a(href="/multistep-form/" class=step == 1 ? "selected" : "").step_counter__number 1
-          .step_counter__info
-            p.step_counter__step Step 1
-            h2.step_counter__title Personal info
+          //- side panel / step counter
+          nav.step_counter
+            .step
+              a(href="/multistep-form/" class=step == 1 ? "selected" : "").step_counter__number 1
+              .step_counter__info
+                p.step_counter__step Step 1
+                h2.step_counter__title Your info
 
-          a(href="/multistep-form/step-2/" class=step == 2 ? "selected" : "").step_counter__number 2
-          .step_counter__info
-            p.step_counter__step Step 2
-            h2.step_counter__title Select plan
+            .step
+              a(href="/multistep-form/step-2/" class=step == 2 ? "selected" : "").step_counter__number 2
+              .step_counter__info
+                p.step_counter__step Step 2
+                h2.step_counter__title Select plan
 
-          a(href="/multistep-form/step-3/" class=step == 3 ? "selected" : "").step_counter__number 3
-          .step_counter__info
-            p.step_counter__step Step 3
-            h2.step_counter__title Add-ons
-
-          a(href="/multistep-form/step-4/" class=step == 4 ? "selected" : "").step_counter__number 4
-          .step_counter__info
-            p.step_counter__step Step 4
-            h2.step_counter__title Summary
-      
-      .form_container
-        .form
-          block content
-        .form_nav
-          if backLink
-            a(href=backLink) Go Back
-          else 
-            p &nbsp;
-          if !end
-            button Next Step
+            .step
+              a(href="/multistep-form/step-3/" class=step == 3 ? "selected" : "").step_counter__number 3
+              .step_counter__info
+                p.step_counter__step Step 3
+                h2.step_counter__title Add-ons
+            .step
+              a(href="/multistep-form/step-4/" class=step == 4 ? "selected" : "").step_counter__number 4
+              .step_counter__info
+                p.step_counter__step Step 4
+                h2.step_counter__title Summary
+        
+        .form_container
+          .form
+            block content
+          .form_nav
+            if backLink
+              a(href=backLink) Go Back
+            else 
+              p &nbsp;
+            if !end
+              button Next Step
 
     block body_extras
 
