@@ -9,4 +9,31 @@ block head_extras
   link(rel="stylesheet", href="../styles.css")
 
 block content
-  h1 Select Plan
+  h1 Select your plan 
+  p.form__subtitle You have the option of monthly or yearly billing.
+
+  .plan_select
+    input(type="radio", name="plan", id="arcade", value="arcade")
+    label(for="arcade").plan_select__option
+      img(src="../assets/images/icon-arcade.svg", alt="Arcade plan")
+      span.plan_select__info
+        span.plan_select__heading Arcade 
+        span.plan_select__subtitle $9/mo
+      
+    input(type="radio", name="plan", id="advanced", value="advanced")
+    label(for="advanced").plan_select__option
+      img(src="../assets/images/icon-advanced.svg", alt="Advanced plan")
+      span.plan_select__info 
+        span.plan_select__heading Advanced 
+        span.plan_select__subtitle $12/mo
+      
+    input(type="radio", name="plan", id="pro", value="pro")
+    label(for="pro").plan_select__option
+      img(src="../assets/images/icon-pro.svg", alt="Pro plan")
+      span.plan_select__info 
+        span.plan_select__heading Pro 
+        span.plan_select__subtitle $15/mo
+
+  .billing_duration 
+    label(for="billing_duration").billing_duration__label Billing Duration
+      

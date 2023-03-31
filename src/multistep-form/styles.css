@@ -122,7 +122,7 @@ h1, p {
   padding: 16px 20px;
   background-color: var(--color-marine-blue);
   border: none;
-  border-radius: 10px;
+  border-radius: 6px;
   color: var(--color-alabaster);
   cursor: pointer;
 }
@@ -214,6 +214,50 @@ h1, p {
   display: none;
 }
 
+.plan_select {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.plan_select__option {
+  border: 1px solid var(--color-light-gray);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.plan_select__info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.plan_select__heading {
+  font-weight: var(--font-weight-bold);
+  font-size: 1.2rem;
+  display: block;
+}
+
+.plan_select__subtitle {
+  font-size: 1rem;
+  color: var(--color-cool-gray);
+  display: block;
+}
+
+.plan_select input[type="radio"] {
+  opacity: 0;
+  width: 0;
+  display: none;
+}
+
+.plan_select input[type="radio"]:checked + .plan_select__option {
+  border-color: var(--color-purple-blue);
+  background-color: hsla(228, 100%, 84%, 0.1);
+}
+
 
 /* ---------------------------------------- DESKTOP ----------------------------------- */
 @media screen and (min-width: 768px) {
@@ -279,5 +323,25 @@ h1, p {
     justify-content: space-between;
     width: 584px;
     margin-right: 52px;
+  }
+
+  .plan_select {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .plan_select__info {
+    width: 50%;
+  }
+
+  .plan_select__option {
+    flex-direction: column;
+    width: 230px;
+  }
+
+  .plan_select__option img {
+    width: 34px;
+    height: 34px;
+    margin: 0 0 26px 0;
   }
 }
