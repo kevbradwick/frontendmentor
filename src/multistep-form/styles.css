@@ -84,7 +84,7 @@ h1, p {
 .form__subtitle {
   font-size: 1.1rem;
   color: var(--color-cool-gray);
-  margin-bottom: 20px;
+  margin-bottom: 42px;
 }
 
 .form_nav {
@@ -118,6 +118,23 @@ h1, p {
 .form_nav button:hover,
 .form_nav button:focus {
   background-color: hsla(213, 96%, 18%, 0.9);
+}
+
+.form__field {
+  margin-bottom: 10px;
+}
+.form__label {
+  display: block;
+  margin-bottom: 10px;
+}
+.form__input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--color-light-gray);
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: var(--color-cool-gray);
 }
 
 .step_counter {
@@ -174,29 +191,14 @@ h1, p {
   display: none;
 }
 
-.form__field {
-  margin-bottom: 16px;
-}
-.form__label {
-  display: block;
-  margin-bottom: 10px;
-}
-.form__input {
-  width: 100%;
-  padding: 12px 16px;
-  border: 1px solid var(--color-light-gray);
-  border-radius: 6px;
-  margin-bottom: 16px;
-  font-size: 1rem;
-  color: var(--color-cool-gray);
-}
+
 
 
 /* ---------------------------------------- DESKTOP ----------------------------------- */
 @media screen and (min-width: 768px) {
   .container {
     max-width: 1062px;
-    min-height: 400px;
+    min-height: 600px;
     margin: 40px auto;
     background-color: white;
     border-radius: 16px;
