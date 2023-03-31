@@ -241,13 +241,24 @@ h1, p {
   display: block;
 }
 
-.plan_select__subtitle {
+.plan_select__subtitle,
+.plan_select__subtitle--yearly {
   font-size: 1rem;
   color: var(--color-cool-gray);
   display: block;
 }
 
-.plan_select--yearly .plan_select__promo {
+.plan_select__subtitle--yearly,
+.plan_select__promo {
+  display: none;
+}
+
+.plan_select--yearly .plan_select__promo,
+.plan_select--yearly .plan_select__subtitle--yearly {
+  display: inline;
+}
+
+.plan_select--yearly .plan_select__subtitle {
   display: none;
 }
 
