@@ -3,6 +3,7 @@ block vars
   - var step = 2
   - var backLink = ""
   - var end = false
+  - var formAction = ""
 
 doctype html 
 html(lang="en")
@@ -48,17 +49,18 @@ html(lang="en")
               .step_counter__info
                 p.step_counter__step Step 4
                 h2.step_counter__title Summary
-        
+         
         .form_container
-          .form
-            block content
-          .form_nav
-            if backLink
-              a(href=backLink) Go Back
-            else 
-              p &nbsp;
-            if !end
-              button Next Step
+          form(action=formAction method="POST")
+            .form
+              block content
+            .form_nav
+              if backLink
+                a(href=backLink) Go Back
+              else 
+                p &nbsp;
+              if !end
+                button Next Step
 
     block body_extras
 

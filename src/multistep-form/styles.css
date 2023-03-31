@@ -67,6 +67,13 @@ h1, p {
   height: 216px;
 }
 
+.form_container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
 .form {
   position: relative;
   top: -86px;
@@ -190,8 +197,6 @@ h1, p {
 .step_counter__info {
   display: none;
 }
-
-
 
 
 /* ---------------------------------------- DESKTOP ----------------------------------- */
