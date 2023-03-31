@@ -14,8 +14,7 @@ block content
   h1 Your Info
   p.form__subtitle Please provide your name, email address, and telephone number.
 
-  form.form__form(action="/multistep-form/step-2/" method="POST")
-    +form-field("name", "Name", "text", "", placeholder="e.g. Stephen King")
-    +form-field("email", "Email Address", "email", "", placeholder="e.g. stephenking@lorem.com")
-    +form-field("phone", "Phone Number", "number", "This field is required", placeholder="e.g. 1 234 567 890")
+  +form-field("name", "Name", "text", "")(placeholder="e.g. Stephen King", required)
+  +form-field("email", "Email Address", "email", "")(placeholder="e.g. stephenking@lorem.com")
+  +form-field("phone", "Phone Number", "number", "This field is required")(placeholder="e.g. 1 234 567 890")
 

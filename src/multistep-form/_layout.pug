@@ -13,8 +13,8 @@ html(lang="en")
     title Step #{step}
 
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css")
-    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
-    link(rel="preconnect", href="https://fonts.googleapis.com", crossorigin)
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin="")
+    link(rel="preconnect", href="https://fonts.googleapis.com", crossorigin="")
     link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap")
 
     block head_extras
@@ -60,7 +60,7 @@ html(lang="en")
               else 
                 p &nbsp;
               if !end
-                button Next Step
+                button(type="submit") Next Step
 
     block body_extras
 
