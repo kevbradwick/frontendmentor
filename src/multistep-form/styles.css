@@ -247,6 +247,10 @@ h1, p {
   display: block;
 }
 
+.plan_select--yearly .plan_select__promo {
+  display: none;
+}
+
 .plan_select input[type="radio"] {
   opacity: 0;
   width: 0;
@@ -261,6 +265,7 @@ h1, p {
 .billing_duration {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: var(--color-alabaster);
   margin-top: 20px;
   padding: 20px;
@@ -291,6 +296,16 @@ h1, p {
   display: block;
   border-radius: 100px;
   position: relative;
+}
+
+.billing_duration__text {
+  color: var(--color-cool-gray);
+  font-weight: var(--font-weight-bold);
+  padding: 0 14px;
+}
+
+.billing_duration__text--selected {
+  color: var(--color-marine-blue);
 }
 
 .billing_duration__label:active:after {
@@ -378,10 +393,6 @@ h1, p {
   .plan_select {
     display: flex;
     flex-direction: row;
-  }
-
-  .plan_select__info {
-    width: 50%;
   }
 
   .plan_select__option {

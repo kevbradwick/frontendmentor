@@ -8,6 +8,9 @@ block vars
 block head_extras 
   link(rel="stylesheet", href="../styles.css")
 
+block body_extras
+  script(src="./script.js")
+
 block content
   h1 Select your plan 
   p.form__subtitle You have the option of monthly or yearly billing.
@@ -19,6 +22,7 @@ block content
       span.plan_select__info
         span.plan_select__heading Arcade 
         span.plan_select__subtitle $9/mo
+        span.plan_select__promo 2 months free
       
     input(type="radio", name="plan", id="advanced", value="advanced")
     label(for="advanced").plan_select__option
@@ -26,6 +30,7 @@ block content
       span.plan_select__info 
         span.plan_select__heading Advanced 
         span.plan_select__subtitle $12/mo
+        span.plan_select__promo 2 months free
       
     input(type="radio", name="plan", id="pro", value="pro")
     label(for="pro").plan_select__option
@@ -33,9 +38,12 @@ block content
       span.plan_select__info 
         span.plan_select__heading Pro 
         span.plan_select__subtitle $15/mo
+        span.plan_select__promo 2 months free
 
   .billing_duration 
-    input(type="checkbox", name="billing_duration", id="monthly", value="monthly").billing_duration__checkbox
-    label(for="monthly").billing_duration__label 
+    span.billing_duration__text Monthly
+    input(type="checkbox", name="billing_duration", id="billing_duration").billing_duration__checkbox
+    label(for="billing_duration").billing_duration__label 
+    span.billing_duration__text Yearly
     
       
