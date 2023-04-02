@@ -1,0 +1,21 @@
+//- Step 1
+extends ../_layout.pug
+
+block vars 
+  - var step = 4
+  - var end = true
+
+block head_extras 
+  link(rel="stylesheet", href="../styles.css")
+
+block body_extras
+  script(src="./script.js")
+
+
+block content
+  .thank_you
+    img(src="../assets/images/icon-thank-you.svg", alt="Thank you")
+    h1 Thank you!
+    p.form__subtitle Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.
+    
+      
