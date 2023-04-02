@@ -54,6 +54,9 @@ h1, p {
   padding: 0;
 }
 
+.hidden {
+  display: none !important;
+}
 
 /* ---------------------------------------- MOBILE ----------------------------------- */
 .container {
@@ -334,6 +337,92 @@ h1, p {
   border-radius: 18px;
   transition: 0.3s;
 }
+
+.add_ons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.add_on {
+  position: relative;
+  display: flex;
+}
+
+.add_on__checkbox {
+  opacity: 0;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  top: 34px;
+  left: 24px;
+}
+
+.add_on__label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--color-light-gray);
+  padding: 20px;
+  touch-action: manipulation;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+}
+
+.add_on__description {
+  padding: 0 0 0 40px;
+}
+
+.add_on__title {
+  font-size: 1.15rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 5px;
+}
+
+.add_on__subtitle {
+  font-size: 1rem;
+  color: var(--color-cool-gray);
+}
+
+.add_on__price--monthly,
+.add_on__price--yearly {
+  color: var(--color-purple-blue);
+}
+
+.add_on__description::before {
+  content: "";
+  background-color: var(--color-white);
+  border: 1px solid var(--color-light-gray);
+  border-radius: 3px;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 32px;
+  left: 22px;
+}
+
+.add_on__checkbox:checked + label .add_on__description::before {
+  background-color: var(--color-purple-blue);
+  border-color: var(--color-purple-blue);
+  background-image: url("./assets/images/icon-checkmark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.add_on__label span {
+  display: block;
+}
+
+.add_on__checkbox:checked + .add_on__label {
+  background: #f8f9fd;
+  border-color: var(--color-purple-blue);
+}
+
 
 /* ---------------------------------------- DESKTOP ----------------------------------- */
 @media screen and (min-width: 768px) {

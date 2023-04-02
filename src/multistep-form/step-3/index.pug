@@ -8,10 +8,44 @@ block vars
 block head_extras 
   link(rel="stylesheet", href="../styles.css")
 
+
+block body_extras
+  script(src="./script.js")
+
 block content
   h1 Pick add-ons
   p.form__subtitle Add-ons help enhance your gaming experience. 
 
-  .add_on
-    label.add_on__label
-      span.add_on__label_text--primary
+  .add_ons
+    .add_on
+      input.add_on__checkbox(checked type="checkbox", name="online-service", id="online-service", value="online-service")
+      label.add_on__label(for="online-service")
+        
+        span.add_on__description
+          span.add_on__title Online service
+          span.add_on__subtitle Access to multiplayer games
+        span.add_on__price 
+          span.add_on__price--monthly +$1/mo
+          span.add_on__price--yearly +$10/yr
+
+    .add_on
+      input.add_on__checkbox(type="checkbox", name="larger-storage", id="larger-storage", value="larger-storage")
+      label.add_on__label(for="larger-storage")
+        
+        span.add_on__description
+          span.add_on__title Larger storage
+          span.add_on__subtitle Extra 1TB of cloud save
+        span.add_on__price
+          span.add_on__price--monthly +$2/mo
+          span.add_on__price--yearly +$20/yr
+
+    .add_on
+      input.add_on__checkbox(type="checkbox", name="custom-profile", id="custom-profile", value="custom-profile")
+      label.add_on__label(for="custom-profile")
+        
+        span.add_on__description
+          span.add_on__title Customizable Profile
+          span.add_on__subtitle Custom theme on your profile
+        span.add_on__price
+          span.add_on__price--monthly +$2/mo
+          span.add_on__price--yearly +$20/yr
