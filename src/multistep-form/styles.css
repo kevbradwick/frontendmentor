@@ -43,10 +43,11 @@ CSS Property Ordering
 body {
   margin: 0;
   padding: 0;
-  background-color: aliceblue;
+  background-color: var(--color-magnolia);
   font-family: var(--font-family);
   font-size: var(--font-size);
   color: var(--color-marine-blue);
+  height: 100vh;
 }
 
 h1, p {
@@ -503,10 +504,15 @@ h1, p {
 
 /* ---------------------------------------- DESKTOP ----------------------------------- */
 @media screen and (min-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   .container {
     max-width: 1062px;
     min-height: 600px;
-    margin: 40px auto;
+    margin: 0 auto;
     background-color: white;
     border-radius: 16px;
     padding: 16px;
