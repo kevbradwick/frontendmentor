@@ -4,12 +4,15 @@ extends ../_layout.pug
 block vars 
   - var step = 2
   - var backLink = "/multistep-form/"
+  - var formAction = "/multistep-form/step-3/"
 
 block head_extras 
   link(rel="stylesheet", href="../styles.css")
 
 block body_extras
+  script(src="../app.js")
   script(src="./script.js")
+  script(type="text/javascript") window.app.setupStepTwo();
 
 block content
   h1 Select your plan 

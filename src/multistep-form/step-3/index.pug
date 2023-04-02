@@ -4,13 +4,16 @@ extends ../_layout.pug
 block vars 
   - var step = 3
   - var backLink = "/multistep-form/step-2/"
+  - var formAction = "/multistep-form/step-4/"
 
 block head_extras 
   link(rel="stylesheet", href="../styles.css")
 
 
 block body_extras
+  script(src="../app.js")
   script(src="./script.js")
+  script(type="text/javascript") window.app.setupStepThree();
 
 block content
   h1 Pick add-ons

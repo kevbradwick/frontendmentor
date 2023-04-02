@@ -10,11 +10,16 @@ block vars
 block head_extras 
   link(rel="stylesheet", href="./styles.css")
 
+block body_extras
+  script(src="./app.js")
+  script(type="text/javascript") window.app.setupStepOne();
+
+
 block content
   h1 Your Info
   p.form__subtitle Please provide your name, email address, and telephone number.
 
-  +form-field("name", "Name", "text", "")(placeholder="e.g. Stephen King", required)
-  +form-field("email", "Email Address", "email", "")(placeholder="e.g. stephenking@lorem.com")
-  +form-field("phone", "Phone Number", "number", "This field is required")(placeholder="e.g. 1 234 567 890")
+  +form-field("name", "Name", "text")(placeholder="e.g. Stephen King")
+  +form-field("email", "Email Address", "text", "")(placeholder="e.g. stephenking@lorem.com")
+  +form-field("phone", "Phone Number", "text")(placeholder="e.g. 1 234 567 890")
 
