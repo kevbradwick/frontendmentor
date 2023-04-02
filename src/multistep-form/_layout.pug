@@ -49,7 +49,7 @@ html(lang="en")
               .step_counter__info
                 p.step_counter__step Step 4
                 h2.step_counter__title Summary
-         
+
         .form_container
           form(action=formAction method="POST")
             .form
@@ -60,7 +60,8 @@ html(lang="en")
               else 
                 p &nbsp;
               if !end
-                button(type="submit") Next Step
+                block submit_button
+                  button(type="submit") Next Step
 
     block body_extras
 

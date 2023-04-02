@@ -128,6 +128,7 @@ h1, p {
   border-radius: 6px;
   color: var(--color-alabaster);
   cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .form_nav button:hover,
@@ -372,6 +373,7 @@ h1, p {
   cursor: pointer;
   position: relative;
   width: 100%;
+  transition: all 200ms ease-in-out;
 }
 
 .add_on__description {
@@ -418,11 +420,71 @@ h1, p {
   display: block;
 }
 
+.add_on:hover .add_on__checkbox  + .add_on__label{
+  border-color: var(--color-purple-blue);
+}
+
 .add_on__checkbox:checked + .add_on__label {
   background: #f8f9fd;
   border-color: var(--color-purple-blue);
 }
 
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--color-magnolia);
+  padding: 20px 24px;
+  border-radius: 10px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.summary__plan a {
+  color: var(--color-cool-gray);
+}
+
+.summary__plan a:hover {
+  color: var(--color-purple-blue);
+}
+
+.summary__plan p strong {
+  font-size: 1.1rem;
+}
+
+.summary__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary__add_ons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-top: 1px solid var(--color-light-gray);
+  padding-top: 20px;
+}
+
+.summary__add_ons,
+.summary__total {
+  color: var(--color-cool-gray);
+}
+
+.summary__total {
+  padding: 4px 24px;
+}
+
+.summary__total strong {
+  color: var(--color-purple-blue);
+  font-weight: var(--font-weight-extra-bold);
+  font-size: 1.4rem;
+}
+
+.button_final:hover {
+  background-color: var(--color-purple-blue) !important;
+  opacity: 0.8;
+}
 
 /* ---------------------------------------- DESKTOP ----------------------------------- */
 @media screen and (min-width: 768px) {

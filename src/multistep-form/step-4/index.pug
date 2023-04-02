@@ -4,10 +4,41 @@ extends ../_layout.pug
 block vars 
   - var step = 4
   - var backLink = "/multistep-form/step-3/"
-  - var end = true
+  - var end = false
+  - var buttonText = "Confirm"
 
 block head_extras 
   link(rel="stylesheet", href="../styles.css")
 
+block submit_button  
+  button(type="submit").button_final Confirm
+
 block content
-  h1 Summary
+  h1 Finishing up
+  p.form__subtitle Double-check everything looks OK before confirming. 
+
+  .summary
+    .summary__plan 
+      .summary__row
+        .summary_col 
+          p 
+            strong Arcade (Yearly)
+          a(href="#") Change
+        .summary_col
+          strong $90/yr
+
+    .summary__add_ons
+      .summary__row
+        .summary__col Online service
+        .summary__col +$10/yr
+
+      .summary__row
+        .summary__col Larger storage
+        .summary__col +$20/yr
+
+  .summary__total 
+    .summary__row
+      .summary__col Total (per year)
+      .summary__col
+        strong $120/yr
+    
