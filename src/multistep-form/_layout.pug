@@ -54,12 +54,12 @@ html(lang="en")
           form(action=formAction method="POST")
             .form
               block content
-            .form_nav
-              if backLink
-                a(href=backLink) Go Back
-              else 
-                p &nbsp;
-              if !end
+            if !end
+              .form_nav
+                if backLink
+                  a(href=backLink) Go Back
+                else 
+                  p &nbsp;
                 block submit_button
                   button(type="submit") Next Step
 
