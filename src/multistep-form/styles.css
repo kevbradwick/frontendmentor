@@ -373,7 +373,7 @@ h1, p {
   cursor: pointer;
   position: relative;
   width: 100%;
-  transition: all 200ms ease-in-out;
+  transition: border-color 200ms ease-in-out;
 }
 
 .add_on__description {
@@ -450,6 +450,7 @@ h1, p {
 
 .summary__plan p strong {
   font-size: 1.1rem;
+  text-transform: capitalize;
 }
 
 .summary__row {

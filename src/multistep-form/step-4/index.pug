@@ -6,6 +6,7 @@ block vars
   - var backLink = "/multistep-form/step-3/"
   - var end = false
   - var buttonText = "Confirm"
+  - var formAction = "/multistep-form/finish/"
 
 block head_extras 
   link(rel="stylesheet", href="../styles.css")
@@ -15,6 +16,7 @@ block submit_button
 
 block body_extras
   script(src="../app.js")
+  script(type="text/javascript") window.app.setupStepFour();
 
 block content
   h1 Finishing up
@@ -26,18 +28,11 @@ block content
         .summary_col 
           p 
             strong Arcade (Yearly)
-          a(href="#") Change
+          a(href="/multistep-form/step-3/") Change
         .summary_col
           strong $90/yr
 
     .summary__add_ons
-      .summary__row
-        .summary__col Online service
-        .summary__col +$10/yr
-
-      .summary__row
-        .summary__col Larger storage
-        .summary__col +$20/yr
 
   .summary__total 
     .summary__row

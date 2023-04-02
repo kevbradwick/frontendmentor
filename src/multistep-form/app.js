@@ -167,11 +167,82 @@
     });
   };
 
-  const setupStepFor = () => {
+  const setupStepFour = () => {
+    const billingCycle = getValue("billingCycle");
+    const isMonthly = billingCycle === "monthly";
+    const plan = getValue("plan");
+
+    const prices = {
+      "pro (yearly)": [150, "$150/yr"],
+      "pro (monthly)": [15, "$15/mo"],
+      "advanced (yearly)": [120, "$120/yr"],
+      "advanced (monthly)": [12, "$12/mo"],
+      "arcade (yearly)": [90, "$90/yr"],
+      "arcade (monthly)": [9, "$9/mo"],
+    };
+
+    const addOnPrices = {
+      "online service (yearly)": [10, "$10/yr"],
+      "online service (monthly)": [1, "$1/mo"],
+      "larger storage (yearly)": [20, "$20/yr"],
+      "larger storage (monthly)": [2, "$2/mo"],
+      "customizable profile (yearly)": [20, "$20/yr"],
+      "customizable profile (monthly)": [2, "$2/mo"],
+    }
+
+    const title = `${plan} (${billingCycle})`;
+    const displayPrice = prices[title.toLowerCase()][1];
+    let total = prices[title.toLowerCase()][0];
+
+    document.querySelector(".summary__plan p strong").innerText = title;
+    document.querySelector(".summary__plan .summary_col > strong").innerText =
+      displayPrice;
+
+    const appendAddOn = (title, price) => {
+      const row = document.createElement("div");
+      row.classList.add("summary__row");
+      const col1 = document.createElement("div");
+      col1.classList.add("summary_col");
+      col1.innerText = title;
+      const col2 = document.createElement("div");
+      col2.classList.add("summary_col");
+      col2.innerText = price;
+      row.appendChild(col1);
+      row.appendChild(col2);
+      document.querySelector(".summary__add_ons").appendChild(row);
+    }
+
+    if (getValue("addOnOnlineServices")) { 
+      const title = `online service (${billingCycle})`;
+      const displayPrice = addOnPrices[title.toLowerCase()][1];
+      total += addOnPrices[title.toLowerCase()][0];
+      appendAddOn("Online Service", displayPrice);
+    }
+
+    if (getValue("addOnLargerStorage")) {
+      const title = `larger storage (${billingCycle})`;
+      const displayPrice = addOnPrices[title.toLowerCase()][1];
+      total += addOnPrices[title.toLowerCase()][0];
+      appendAddOn("Larger Storage", displayPrice);
+    }
+    if (getValue("addOnCustomizableProfile")) {
+      const title = `customizable profile (${billingCycle})`;
+      const displayPrice = addOnPrices[title.toLowerCase()][1];
+      total += addOnPrices[title.toLowerCase()][0];
+      appendAddOn("Customizable Profile", displayPrice);
+    }
+
+    document.querySelector(".summary__total strong").innerText = `$${total}/${isMonthly ? "mo" : "yr"}`;
+    const totalText = `Total (${isMonthly ? "per month" : "per year"})`;
+    document.querySelector(
+      ".summary__total .summary__row .summary__col"
+    ).innerText = totalText;
+
     form.addEventListener("submit", (e) => {
       e.preventDefault();
+      window.location.href = form.action;
     });
   };
 
-  window.app = {setupStepOne, setupStepTwo, setupStepThree, setupStepFor};
+  window.app = {setupStepOne, setupStepTwo, setupStepThree, setupStepFour};
 }());
