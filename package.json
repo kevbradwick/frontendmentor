@@ -4,7 +4,7 @@
   "description": "This repo holds the source code to the challenges featured on [frontendmentor.io](https://frontendmentor.io)",
   "scripts": {
     "start": "parcel 'src/**/*.{pug,html}'",
-    "build": "parcel build 'src/**/*.pug' --no-cache"
+    "build": "parcel build 'src/**/*.{pug,html}' --no-cache"
   },
   "keywords": [],
   "author": "",
