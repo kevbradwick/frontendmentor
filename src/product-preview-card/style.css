@@ -7,8 +7,16 @@ body {
 }
 
 @layer components {
-  .product-image {
+  .product-image-desktop {
     background: url(./images/image-product-desktop.jpg) no-repeat center;
+    background-size: cover;
+    height: auto;
+
+    @apply rounded-none rounded-l-xl w-1/2;
+  }
+
+  .product-image-mobile {
+    background: url(./images/image-product-mobile.jpg) no-repeat center;
     background-size: cover;
   }
 }

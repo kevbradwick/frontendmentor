@@ -13,17 +13,20 @@
 </head>
 
   <body class="bg-cream h-screen font-montserrat flex items-center justify-center text-dark-grayish-blue">
-    <main class="bg-white rounded-xl w-[680px] flex">
-      <div class="product-image rounded-l-xl w-1/2"></div>
-      <div class="w-1/2 p-8">
-        <p class="mb-5 uppercase tracking-[.5rem]">Perfume</p>
-        <h1 class="font-fraunces text-4xl text-very-dark-blue mb-7 p-0">Gabrielle Essence Eau De Parfum</h1>
-        <p class="mb-7 p-0 leading-7">A flora, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
-        <div class="flex items-center mb-7 gap-5">
+    <main class="bg-white rounded-xl w-[680px] flex flex-col md:flex-row">
+      <div class="product-image-mobile h-[260px] rounded-t-xl md:product-image-desktop"></div>
+      <div class="md:w-1/2 p-8 flex flex-col gap-4 md:gap-7">
+        <p class="uppercase tracking-[.5rem]">Perfume</p>
+        <h1 class="subpixel-antialiased font-fraunces text-3xl md:text-4xl text-very-dark-blue">Gabrielle Essence Eau De Parfum</h1>
+        <p class="leading-7 text-base">A flora, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+        <div class="flex items-center gap-5">
           <p class="font-fraunces text-dark-cyan text-4xl inline">$149.99</p>
           <p class="text-dark-grayish-blue line-through inline">$169.99</p>
         </div>
-        <a href="/product-preview-card" class="bg-dark-cyan hover:bg-very-dark-blue text-white block py-3 rounded-lg text-center transition-colors">Add to cart</a>
+        <a href="/product-preview-card" class="bg-dark-cyan hover:bg-very-dark-blue text-white block py-3 rounded-lg text-center transition-colors">
+          <img src="./images/icon-cart.svg" alt="cart icon" class="inline-block mr-2" />
+          Add to cart
+        </a>
       </div>
     </main>
   </body>
