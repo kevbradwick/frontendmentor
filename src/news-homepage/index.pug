@@ -1,0 +1,98 @@
+doctype html 
+html(lang="en")
+  head 
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title News Homepage
+
+    link(rel="icon", type="image/png", sizes="32x32" href="./assets/images/favicon-32x32.png")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin="")
+    link(rel="preconnect", href="https://fonts.googleapis.com", crossorigin="")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap")
+    link(rel="stylesheet", href="./style.css")
+
+  body
+
+    .container
+      header
+        .logo
+          img(src="./assets/images/logo.svg", alt="logo")
+
+        nav.navigation(role="navigation")
+          input(type="checkbox", id="nav-toggle").navigation__checkbox
+          label(for="nav-toggle").navigation__menu_button
+          .overlay
+          ul.navigation__menu_items
+            li
+              a(href="#") Home
+            li
+              a(href="#") New
+            li
+              a(href="#") Popular 
+            li
+              a(href="#") Trending
+            li
+              a(href="#") Categories
+
+      main
+
+        .hero
+          .hero__image
+
+          h1.hero__title The Bright Future of Web 3.0?
+
+          .hero__summary
+            p 
+              | We dive into the next evolution of the web that claims to put the power 
+              | of the platforms back into the hands of the people. But is it really 
+              | fulfilling its promise?
+            p
+              a(href="#") Read more
+
+        .new_feed
+          h2 New
+          .news_feed__articles
+            .news_feed_article 
+              h3
+                a(href="") Hydrogen vs Electric Cars
+              p Will the hydrogen-fueled cars ever catch up to EVs?
+
+            .news_feed_article
+              h3
+                a(href="") The Downsides of AI Artistry
+              p What are the possible adverse effects of on-demand AI image generation?
+
+            .news_feed_article
+              h3
+                a(href="") Is VC Funding Drying Up?
+              p Private funding by VC firms is down 50% YOY. We take a look at what that means.
+
+        .article
+          .article_thumbnail
+            img(src="./assets/images/image-retro-pcs.jpg", alt="Retro PC")
+          .article_content
+            p.article_number 01
+            h4 Reviving Retro PCs
+            p.article_summary 
+              | What happens when old PCs are given modern upgrades?
+
+        .article
+          .article_thumbnail
+            img(src="./assets/images/image-top-laptops.jpg", alt="Laptops")
+          .article_content
+            p.article_number 02
+            h4 Top 10 laptops of 2022
+            p.article_summary 
+              | Our best picks for various needs and budgets.
+
+        .article
+          .article_thumbnail
+            img(src="./assets/images/image-gaming-growth.jpg", alt="Game console controller")
+          .article_content
+            p.article_number 03
+            h4 The growth of gaming
+            p.article_summary 
+              | How the pandemic has sparked fresh opportunities.
+
+    script(src="./script.js")
