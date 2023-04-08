@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-size: 14px;
+}
+
+@layer components {
+  .product-image {
+    background: url(./images/image-product-desktop.jpg) no-repeat center;
+    background-size: cover;
+  }
+}
