@@ -6,3 +6,5 @@
   * [Source code](./src/qr-code/)
 * [Multistep Form](./challenges/multistep-form/complete/README.md)
   * [Source code](./src/multistep-form/)
+* [Product Preview Card](./challenges/product-preview-card/README.md)
+  * [Source code](./src/product-preview-card/)

@@ -42,8 +42,7 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - Mobile-first workflow
-- Vanilla JavaScript 
-
+- Vanilla JavaScript
 
 ## Author
 
