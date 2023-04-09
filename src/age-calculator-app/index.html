@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+
+  <title>Age Calculator App</title>
+
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.mjs" defer type="module"></script>
+</head>
+<body class="font-aca-poppins bg-aca-off-white p-4 pt-10 h-screen md:flex md:items-center md:justify-center">
+  <main class="bg-aca-white rounded-3xl rounded-br-[100px] w-full md:w-[700px] p-6 py-10 md:p-10">
+    <form method="post" class="flex flex-col gap-7 md:gap-2">
+
+      <!-- input fields -->
+      <div class="flex justify-between md:justify-start gap-2 md:gap-4">
+        <div class="flex flex-col gap-2 flex-[32%] md:flex-none">
+          <label for="day" class="text-aca-smokey-gray text-sm tracking-widest">DAY</label>
+          <input value="20" type="number" name="day" id="day" min="1" max="31" class="border border-aca-light-gray rounded-md px-5 py-3 md:w-[120px] md:text-2xl">
+        </div>
+        <div class="flex flex-col gap-2 flex-[32%] md:flex-none">
+          <label for="month" class="text-aca-smokey-gray text-sm tracking-widest">MONTH</label>
+          <input value="12" type="number" name="month" id="month" min="1" max="12" class="border border-aca-light-gray rounded-md px-5 py-3 md:w-[120px] md:text-2xl">
+        </div>
+        <div class="flex flex-col gap-2 flex-[32%] md:flex-none">
+          <label for="year" class="text-aca-smokey-gray text-sm tracking-widest">YEAR</label>
+          <input value="1979" type="number" name="year" id="year" min="1900" max="2021" class="border border-aca-light-gray rounded-md px-5 py-3 md:w-[120px] md:text-2xl">
+        </div>
+      </div>
+
+      <!-- submit button -->
+      <div class="relative  md:h-[74px] h-[64px] flex flex-col items-center justify-center">
+        <hr class="w-full z-1 border-aca-light-gray">
+        <button type="submit" class="bg-aca-purple hover:bg-aca-off-black transition-all text-aca-white md:w-[74px] md:h-[74px] h-[64px] w-[64px] rounded-[50%] flex items-center justify-center absolute z-2 md:right-0">
+          <object data="./assets/images/icon-arrow.svg" title="arrow" class="scale-75 ">
+        </button>
+      </div>
+
+      <!-- result -->
+      <div class="italic font-extrabold text-5xl md:text-8xl flex flex-col gap-1">
+        <p><span class="text-aca-purple">--</span> years</p>
+        <p><span class="text-aca-purple">--</span> months</p>
+        <p><span class="text-aca-purple">--</span> days</p>
+      </div>
+
+    </form>
+  </main>
+</body>
+</html>
