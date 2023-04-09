@@ -5,3 +5,16 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
+:root {
+  --light-red: hsl(0, 100%, 67%);
+}
+
+.error label,
+.error p {
+  color: var(--light-red);
+}
+
+.error input {
+  border-color: var(--light-red);
+}

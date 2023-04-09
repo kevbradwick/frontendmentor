@@ -24,6 +24,7 @@ module.exports = {
       fraunces: ["Fraunces", "ui-serif", "serif"],
 
       "aca-poppins": ["Poppins", "ui-sans-serif", "sans-serif"],
+      "sans": ["ui-sans-serif", "system-ui"],
     },
   },
   plugins: [],
