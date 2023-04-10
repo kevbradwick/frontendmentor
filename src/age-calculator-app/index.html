@@ -12,6 +12,9 @@
   <title>Age Calculator App</title>
 
   <link rel="stylesheet" href="./style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+    
   <script src="./script.mjs" defer type="module"></script>
 </head>
 <body class="font-aca-poppins bg-aca-off-white p-4 pt-10 h-screen md:flex md:items-center md:justify-center">
@@ -32,7 +35,7 @@
         </div>
         <div class="flex flex-col gap-2 flex-[32%] md:flex-none">
           <label for="year" class="text-aca-smokey-gray text-sm tracking-widest">YEAR</label>
-          <input value="2024" type="number" name="year" id="year" min="1900" class="border border-aca-light-gray rounded-md px-5 py-3 md:w-[120px] md:text-2xl">
+          <input value="1979" type="number" name="year" id="year" min="1900" class="border border-aca-light-gray rounded-md px-5 py-3 md:w-[120px] md:text-2xl">
           <p class="font-light font-sans hidden">Invalid year</p>
         </div>
       </div>
@@ -49,9 +52,9 @@
 
       <!-- result -->
       <div class="italic font-extrabold text-5xl md:text-8xl flex flex-col gap-1">
-        <p><span class="text-aca-purple">--</span> years</p>
-        <p><span class="text-aca-purple">--</span> months</p>
-        <p><span class="text-aca-purple">--</span> days</p>
+        <p><span class="text-aca-purple" id="output-years">--</span> years</p>
+        <p><span class="text-aca-purple" id="output-months">--</span> months</p>
+        <p><span class="text-aca-purple" id="output-days">--</span> days</p>
       </div>
 
     </form>
