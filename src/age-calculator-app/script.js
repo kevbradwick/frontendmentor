@@ -1,3 +1,4 @@
+/* global moment */
 document.querySelector("form").addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -21,23 +22,31 @@ document.querySelector("form").addEventListener("submit", (event) => {
   outputMonths.textContent = "--";
   outputDays.textContent = "--";
 
-  // validate day
-  if (!day.value || day.value < 1 || day.value > 31) {
+  // use moment.js to validate date
+  const birthDate = moment([year.value, month.value - 1, day.value]);
+  if (!birthDate.isValid()) {
     container.classList.add("error");
-    day.nextElementSibling.classList.remove("hidden");
-    return;
-  }
 
-  // validate month
-  if (!month.value || month.value < 1 || month.value > 12) {
-    container.classList.add("error");
-    month.nextElementSibling.classList.remove("hidden");
+    if (!year.value && !month.value && !day.value) {
+      return;
+    }
+
+    if (birthDate.invalidAt() == 1) {
+      year.nextElementSibling.classList.remove("hidden");
+    }
+
+    if (birthDate.invalidAt() == 2) {
+      month.nextElementSibling.classList.remove("hidden");
+    }
+
+    if (birthDate.invalidAt() == 3) {
+      day.nextElementSibling.classList.remove("hidden");
+    }
     return;
   }
 
   // create a new Date object with the user's input
-  const birthDate = new Date(year.value, month.value - 1, day.value);
-  const now = new Date();
+  const now = moment();
 
   if (birthDate > now) {
     container.classList.add("error");
@@ -45,15 +54,9 @@ document.querySelector("form").addEventListener("submit", (event) => {
     return;
   }
 
-  const diff = Math.floor(now - birthDate);
-  const dayMs = 1000 * 60 * 60 * 24;
+  const diffDuration = moment.duration(now.diff(birthDate));
 
-  const totalDays = Math.floor(diff / dayMs);
-  const yearsOld = Math.floor(totalDays / 365);
-  const monthsOld = Math.floor((totalDays % 365) / 30);
-  const daysOld = Math.floor(totalDays - (yearsOld * 365) - (monthsOld * 30));
-
-  outputYears.textContent = yearsOld;
-  outputMonths.textContent = monthsOld;
-  outputDays.textContent = daysOld;
+  outputYears.textContent = diffDuration.years();
+  outputMonths.textContent = diffDuration.months();
+  outputDays.textContent = diffDuration.days();
 });

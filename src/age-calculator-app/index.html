@@ -12,7 +12,8 @@
   <title>Age Calculator App</title>
 
   <link rel="stylesheet" href="./style.css">
-    
+  
+  <script src="https://unpkg.com/moment@2.9.0/moment.js" defer></script>
   <script src="./script.js" defer></script>
 </head>
 <body class="font-aca-poppins bg-aca-off-white p-4 pt-10 h-screen md:flex md:items-center md:justify-center">
@@ -23,17 +24,17 @@
       <div class="flex justify-between gap-2 w-full md:justify-start md:gap-4" id="input-fields">
         <div class="flex flex-col gap-2">
           <label for="day" class="text-aca-smokey-gray text-sm tracking-widest">DAY</label>
-          <input value="20" type="number" name="day" id="day" class="border border-aca-light-gray rounded-md px-5 py-3 w-full md:w-[120px] md:text-2xl">
+          <input value="" type="number" name="day" id="day" class="border border-aca-light-gray rounded-md px-5 py-3 w-full md:w-[120px] md:text-2xl">
           <p class="font-light font-sans hidden">Invalid day</p>
         </div>
         <div class="flex flex-col gap-2">
           <label for="month" class="text-aca-smokey-gray text-sm tracking-widest">MONTH</label>
-          <input value="12" type="number" name="month" id="month" class="border border-aca-light-gray rounded-md px-5 py-3 w-full md:w-[120px] md:text-2xl">
+          <input value="" type="number" name="month" id="month" class="border border-aca-light-gray rounded-md px-5 py-3 w-full md:w-[120px] md:text-2xl">
           <p class="font-light font-sans hidden">Invalid month</p>
         </div>
         <div class="flex flex-col gap-2">
           <label for="year" class="text-aca-smokey-gray text-sm tracking-widest">YEAR</label>
-          <input value="1979" type="number" name="year" id="year" min="1900" class="border border-aca-light-gray rounded-md px-5 py-3 w-full md:w-[120px] md:text-2xl">
+          <input value="" type="number" name="year" id="year" min="1900" class="border border-aca-light-gray rounded-md px-5 py-3 w-full md:w-[120px] md:text-2xl">
           <p class="font-light font-sans hidden">Invalid year</p>
         </div>
       </div>
